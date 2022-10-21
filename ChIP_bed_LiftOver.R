@@ -24,7 +24,7 @@ trans_list <- list()
 origi_list <- list()
 for( i in 1:nrow(TFdata)){
   tryCatch({
-  TF_No <- 57 #enter TF number
+  TF_No <- i #enter TF number
   tfbs.path = paste0(TFdata[TF_No, 4])
   BED <- fread(tfbs.path,showProgress=FALSE)
   if(sum(grep("hg19",BED$V4)) == 0){
